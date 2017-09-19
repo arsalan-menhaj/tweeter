@@ -32,7 +32,7 @@ var data = [
       "handle": "@SirIsaac"
     },
     "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
+      "text": "If I have seen further it is by standing on the shoulders of giants <script>alert('uh oh!');</script>"
     },
     "created_at": 1461116232227
   },
@@ -93,7 +93,7 @@ function createTweetElement1(tweet) {
               <h2 class="username">${tweet.user.name}</h2>
               <div class="empty"> </div>
             </header>
-            <p class="content">${tweet.content.text}</p>
+            <p class="content"></p>
             <footer>
               <p class="timestamp">${moment(tweet.created_at).fromNow()}</p>
               <img class="icon" src="/images/icons/flag.png">
@@ -165,7 +165,8 @@ function createTweetElement2(tweet) {
 function renderTweets(tweets) {
   for (var tweet of tweets) {
     $tweet = createTweetElement1(tweet);
-    $('#tweets-container').append($tweet);
+    $('#tweets-container').prepend($tweet);
+    $('#tweets-container').find(".content:first").text(tweet.content.text);
   }
 }
 

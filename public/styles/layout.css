@@ -103,6 +103,7 @@ main .empty {
 .tweet .content {
   padding-left: 0.5em;
   padding-right: 0.5em;
+  color: #000000;
 }
 
 .tweet footer {
