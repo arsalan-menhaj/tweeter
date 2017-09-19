@@ -5,6 +5,7 @@
  */
 html {
   box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -23,3 +24,116 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+main {
+  padding-top: 140px;
+  padding-left: 2em;
+  padding-right: 2em;
+  height: 100%;
+  width: 450px;
+  margin: auto;
+  background-color: #ffffff;
+  color: #00a087;
+}
+
+main .new-tweet {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  background-color: #DCDCDC;
+
+
+  margin: 1px;
+  border: 1px solid;
+  border-color: #C0C0C0;
+  border-radius: 0.5em;
+}
+
+main .new-tweet h2 {
+  width: 12.75em;
+  border-bottom: 1px solid;
+  border-bottom-color: #000000;
+  float: left;
+  vertical-align: middle;
+}
+
+main .new-tweet img {
+  float: left;
+}
+
+main .new-tweet textarea {
+  width: 100%;
+}
+
+main .new-tweet input{
+  float: left;
+  margin-bottom: 0.5em;
+}
+
+main .new-tweet .counter {
+  float: right;
+}
+
+main .empty {
+  clear: both;
+  height: 0;
+}
+
+.text-too-long {
+  color: #ff0000;
+}
+
+.tweet {
+  margin-top: 1em;
+  border: 1px solid;
+  border-color: #C0C0C0;
+  border-radius: 0.5em;
+}
+
+.tweet header {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  background-color: #DCDCDC;
+}
+
+.tweet h2 {
+  margin-top: 0;
+  padding-top: 0.25em;
+}
+
+.tweet .content {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.tweet footer {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border-top: 1px solid;
+
+  font-size: 50%;
+}
+
+.tweet footer p {
+  width: 50%;
+  display: inline-block;
+}
+
+.tweet .icon {
+  float: right;
+  margin: 0.5em;
+  display: none;
+}
+
+.tweet:hover .icon {
+  display: inline-block;
+}
+
+.avatar {
+  float: left;
+  height: 3em;
+  width: 3em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  border-radius: 0.5em;
+}
