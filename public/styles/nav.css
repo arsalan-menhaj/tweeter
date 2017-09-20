@@ -21,3 +21,26 @@
   vertical-align: middle;
   line-height: 80px;
 }
+
+#compose-button {
+  float: right;
+  font size: 175%;
+  line-height: 60px;
+  height: 60px;
+  width: 80px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  border: 1px solid;
+  border-color: #C0C0C0;
+  border-radius: 10px;
+}
+
+#compose-button p {
+  margin-bottom: 10px;
+}
+
+#compose-button:hover {
+  background-color: #F0FFFF;
+  color: #00a087;
+}
