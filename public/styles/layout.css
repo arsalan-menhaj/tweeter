@@ -143,3 +143,10 @@ main .empty {
   margin-top: 0.5em;
   border-radius: 0.5em;
 }
+
+#error-message {
+  float: left;
+  font-size: 50%;
+  color: #ff0000;
+  margin-left: 0.5em;
+}

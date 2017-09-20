@@ -86,11 +86,11 @@ var tweetHTML = `"<article class="tweet">
 
 // More efficient method in which an existing HTML template is
 // used and returned
-function createTweetElement1(tweet) {
+function createTweetElement1() {
 
   var tweetHTML = `<article class="tweet">
             <header>
-              <img class="avatar" src="${tweet.user.avatars.small}">
+              <img class="avatar">
               <h2 class="username"></h2>
               <div class="empty"> </div>
             </header>
@@ -163,18 +163,29 @@ function createTweetElement2(tweet) {
   return $tweet;
 }
 
-function renderTweets(tweets) {
-  for (var tweet of tweets) {
+function renderTweets(tweetsArray) {
+  // var tweetsArray = loadTweets(url);
+  for (var tweet of tweetsArray) {
     $tweet = createTweetElement1(tweet);
     $('#tweets-container').prepend($tweet);
     $('#tweets-container').find(".content:first").text(tweet.content.text);
     $('#tweets-container').find(".avatar:first").text();
     $('#tweets-container').find(".username:first").text(tweet.user.name);
     $('#tweets-container').find(".timestamp:first").text(moment(tweet.created_at).fromNow());
+    $('#tweets-container').find(".avatar:first").attr("src", tweet.user.avatars.small);
   }
+}
+
+function loadTweets() {
+  // Will use jQuery to make requests to /tweets
+  // and receive JSON
+
+  $.get("/tweets").done(function(data) {
+    renderTweets(data);
+  });
 }
 
 
 $(document).ready(function () {
-  renderTweets(data);
+  loadTweets();
 });// to add it to the page so we can make sure it's got all the right elements, classes, etc.
