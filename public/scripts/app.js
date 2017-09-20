@@ -87,15 +87,16 @@ var tweetHTML = `"<article class="tweet">
 // More efficient method in which an existing HTML template is
 // used and returned
 function createTweetElement1(tweet) {
+
   var tweetHTML = `<article class="tweet">
             <header>
               <img class="avatar" src="${tweet.user.avatars.small}">
-              <h2 class="username">${tweet.user.name}</h2>
+              <h2 class="username"></h2>
               <div class="empty"> </div>
             </header>
             <p class="content"></p>
             <footer>
-              <p class="timestamp">${moment(tweet.created_at).fromNow()}</p>
+              <p class="timestamp"></p>
               <img class="icon" src="/images/icons/flag.png">
               <img class="icon" src="/images/icons/retweet.png">
               <img class="icon" src="/images/icons/like.png">
@@ -167,10 +168,11 @@ function renderTweets(tweets) {
     $tweet = createTweetElement1(tweet);
     $('#tweets-container').prepend($tweet);
     $('#tweets-container').find(".content:first").text(tweet.content.text);
+    $('#tweets-container').find(".avatar:first").text();
+    $('#tweets-container').find(".username:first").text(tweet.user.name);
+    $('#tweets-container').find(".timestamp:first").text(moment(tweet.created_at).fromNow());
   }
 }
-
-
 
 
 $(document).ready(function () {

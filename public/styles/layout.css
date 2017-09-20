@@ -93,6 +93,7 @@ main .empty {
   padding-left: 0.5em;
   padding-right: 0.5em;
   background-color: #DCDCDC;
+  opacity: 80%;
 }
 
 .tweet h2 {
@@ -123,6 +124,10 @@ main .empty {
   float: right;
   margin: 0.5em;
   display: none;
+}
+
+.tweet:hover header{
+  opacity: 1;
 }
 
 .tweet:hover .icon {
