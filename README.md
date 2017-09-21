@@ -19,5 +19,5 @@ Tweeter is a simple, single-page, AJAX-based Twitter clone that uses jQuery, HTM
 
 
 ## Screenshots
-!["Screenshot of Tweet Compose Box and Navbar"] (https://github.com/arsalan-menhaj/tweeter/blob/master/public/images/screenshots/navbar.png)
+!["Screenshot of Tweet Compose Box and Navbar"](https://github.com/arsalan-menhaj/tweeter/blob/master/public/images/screenshots/navbar.png)
 !["Screenshot of Tweets"](https://github.com/arsalan-menhaj/tweeter/blob/master/public/images/screenshots/tweet-container.png)
