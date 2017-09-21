@@ -34,6 +34,7 @@ main {
   margin: auto;
   background-color: #ffffff;
   color: #00a087;
+  z-index: 0;
 }
 
 main .new-tweet {
@@ -50,19 +51,17 @@ main .new-tweet {
 }
 
 main .new-tweet h2 {
-  width: 12.75em;
+  width: 100%;
   border-bottom: 1px solid;
   border-bottom-color: #000000;
   float: left;
   vertical-align: middle;
 }
 
-main .new-tweet img {
-  float: left;
-}
-
 main .new-tweet textarea {
   width: 100%;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 
 main .new-tweet input{
@@ -72,6 +71,7 @@ main .new-tweet input{
 
 main .new-tweet .counter {
   float: right;
+  vertical-align: middle;
 }
 
 main .empty {
@@ -88,6 +88,11 @@ main .empty {
   border: 1px solid;
   border-color: #C0C0C0;
   border-radius: 0.5em;
+  opacity: 0.6;
+}
+
+.tweet:hover {
+  opacity: 1;
 }
 
 .tweet header {
@@ -119,6 +124,8 @@ main .empty {
 .tweet footer p {
   width: 50%;
   display: inline-block;
+  margin-left: 0.5em;
+  color: #000000;
 }
 
 .tweet .icon {
@@ -147,7 +154,7 @@ main .empty {
 
 #error-message {
   float: left;
-  font-size: 50%;
+  font-size: 75%;
   color: #ff0000;
-  margin-left: 0.5em;
+  margin: 0.5em;
 }
