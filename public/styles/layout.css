@@ -119,27 +119,33 @@ main .empty {
   border-top: 1px solid;
 
   font-size: 50%;
+  color: #000000;
 }
 
 .tweet footer p {
   width: 50%;
   display: inline-block;
   margin-left: 0.5em;
-  color: #000000;
+
 }
 
-.tweet .icon {
+.tweet i {
   float: right;
   margin: 0.5em;
   display: none;
+  font-size: 150%
 }
 
 .tweet:hover header{
   opacity: 1;
 }
 
-.tweet:hover .icon {
+.tweet:hover i {
   display: inline-block;
+}
+
+.tweet i:hover {
+  color: #00FFFF;
 }
 
 .avatar {

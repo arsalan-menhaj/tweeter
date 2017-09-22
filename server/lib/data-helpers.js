@@ -31,5 +31,6 @@ module.exports = function makeDataHelpers(db) {
           callback(null, tweetsList);
         });
     }
-  };
+
+  }
 }

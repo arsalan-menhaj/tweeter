@@ -19,9 +19,9 @@ function createTweetElement1() {
             <p class="content"></p>
             <footer>
               <p class="timestamp"></p>
-              <img class="icon" src="/images/icons/flag.png">
-              <img class="icon" src="/images/icons/retweet.png">
-              <img class="icon" src="/images/icons/like.png">
+              <i id="retweet" class="fa fa-flag" aria-hidden="true">&nbsp</i>
+              <i id="retweet" class="fa fa-retweet" aria-hidden="true">&nbsp</i>
+              <i id="like" class="fa fa-heart-o" aria-hidden="true"></i>
             </footer>
           </article>
           </html>`
@@ -80,13 +80,19 @@ function takeInputText(input) {
 }
 
 $(document).ready(function () {
+
   loadTweets();
+
+  // Event handler to toggle new tweet area when Compose button is clicked
   $("#compose-button").on("click", toggleNewTweet);
+
+  // Event handler for new tweet submission
   var $form = $('#new-tweet-submit');
   $form.on('submit', function (event) {
     event.preventDefault();
     var formData = $(this).serialize();
     var inputValue = $("#new-tweet-input").val();
     takeInputText(inputValue);
+    $("#new-tweet-input").val(null);
   });
 });// to add it to the page so we can make sure it's got all the right elements, classes, etc.
